@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckihxfdxvxl6j"]
+
+[ext_resource type="PackedScene" uid="uid://ckbgck56jmeeh" path="res://Enemybody1.tscn" id="1_nbbik"]
+
+[sub_resource type="Curve2D" id="Curve2D_uftja"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 64, 320, 0, 0, 0, 0, 3840, 320, 0, 0, 0, 0, 3840, 896, 0, 0, 0, 0, 768, 960, 0, 0, 0, 0, 576, 960, 0, 0, 0, 0, 576, 1600, 0, 0, 0, 0, 4672, 1600)
+}
+point_count = 7
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_uftja")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(64, 320)
+loop = false
+
+[node name="Soldier a" parent="PathFollow2D" instance=ExtResource("1_nbbik")]
